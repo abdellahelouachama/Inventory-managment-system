@@ -1,6 +1,6 @@
 import unittest
-from Product_Management import Product
-from db_conncetion import create_connection, get_cursor, close_connection
+from scripts.Product_Management import Product
+from scripts.db_conncetion import create_connection, get_cursor, close_connection
 
 connection = create_connection()
 mycursor = get_cursor(connection)

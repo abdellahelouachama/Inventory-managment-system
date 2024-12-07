@@ -1,7 +1,7 @@
-from Product_Management import product_menu
-from Supplier_Management import supplier_menu
-from Sales_Transactions import sales_menu
-from Reports_Analytics import reports_menu
+from scripts.Product_Management import product_menu
+from scripts.Supplier_Management import supplier_menu
+from scripts.Sales_Transactions import sales_menu
+from scripts.Reports_Analytics import reports_menu
 
 print("Welcome to the Inventory Management System!")
 print("What would you like to do?")

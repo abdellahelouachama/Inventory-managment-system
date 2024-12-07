@@ -1,6 +1,6 @@
 import unittest
-from Reports_Analytics import Reports
-from db_conncetion import create_connection, get_cursor, close_connection
+from scripts.Reports_Analytics import Reports
+from scripts.db_conncetion import create_connection, get_cursor, close_connection
 
 class ReportsTest(unittest.TestCase):
     def setUp(self):

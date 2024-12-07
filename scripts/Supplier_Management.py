@@ -1,4 +1,4 @@
-from db_conncetion import create_connection, get_cursor, close_connection
+from scripts.db_conncetion import create_connection, get_cursor, close_connection
 connection = create_connection()
 mycursor = get_cursor(connection)
 class Supplier:

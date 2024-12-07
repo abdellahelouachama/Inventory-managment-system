@@ -1,7 +1,7 @@
       Inventory managment system
 
 ## Descrption:
- Welcome to our project! This an inventory managment system that provide the users multiple features to manage thier inventories such as Product managment, Supplier managment, record sales transaction, and generating reports on revenue, best-selling products, and stock alerts, this project build with python and use sql to intract to intract with mysql database, and I plan to add features to this project such as Advanced Forecasting, Discounts to Sales, Supplier Orders, The solution will be terminal-based 
+ Welcome to our project! This an inventory managment system that provide the user multiple features to manage an inventory such as Product managment, Supplier managment, record sales transaction, and generating reports on revenue, best-selling products, and stock alerts, this project build with python and use sql to intract with mysql database, and I plan to add features to this project such as Advanced Forecasting, Discounts to Sales, Supplier Orders, the software intraction is terminal-based 
 
 ## How to Install and Run the Project:
 step1: install the project through froking it from github 
@@ -9,7 +9,7 @@ step2: open your cmd or terminal and navigate to the project dirctory "Inventory
 step3: run this command line "python main.py"
 
 ## How to Use the Project: 
-when you the command line "python main.py" it will display the main menu including the principle features: 
+when you run the command line "python main.py" it will display the main menu including the principle features: 
 
 Product Management:
 if you entre this operation it will leads you to product managment menu wich include:

@@ -29,15 +29,15 @@ class Sales:
             
 
                 connection.commit()
-                # print("Sale inserted successfully")
-                return "Sale inserted successfully"
+                print("Sale Added Successfully")
+                # return "Sale inserted successfully"
 
             else:
-                # print("Insufficient Stock")
-                return "Insufficient Stock"
+                print("Insufficient Stock")
+                # return "Insufficient Stock"
         else:
-            # print("No product found matching this name!")   
-            return "No product found matching this name!"    
+            print("No Product Found Matching This Name!")   
+            # return "No product found matching this name!"    
 
 
     @staticmethod 
@@ -46,14 +46,14 @@ class Sales:
         result = mycursor.fetchall()
 
         if result: 
-        #    print("Sales History: ")
+           print("Sales History: ")
            for row in result:
-                # print(f"Product name: {row[0]}, Quantity sold: {row[1]}, Sale date: {row[2]}, Revenue: {row[3]}")
-                ...
-           return "Sales exist"    
+                print(f"Product name: {row[0]}, Quantity sold: {row[1]}, Sale date: {row[2]}, Revenue: {row[3]}")
+            
+        #    return "Sales exist"    
         else:
-            # print("No Sales Found ")
-            return "No Sales Found "
+            print("No Sales Found ")
+            # return "No Sales Found "
 def sales_menu():
     operations = ["Record Sale Transaction", "View Sales History", "Exit"]
     print("Menu: ")
@@ -68,8 +68,8 @@ def sales_menu():
 
                 while True:
                     try:
-                        product_name = input("What product sold: ").lower().strip()
-                        quantity_sold = input("How many items sold: ")
+                        product_name = input("What Product You Sold: ").lower().strip()
+                        quantity_sold = input("How Many Items Sold: ")
 
                         if not product_name.isalpha() or not quantity_sold.isnumeric():
                             raise ValueError ("Please entre a valid inputs!")

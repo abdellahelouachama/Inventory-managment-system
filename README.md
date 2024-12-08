@@ -1,38 +1,61 @@
       Inventory managment system
 
 ## Descrption:
- Welcome to our project! This an inventory managment system that provide the user multiple features to manage an inventory such as Product managment, Supplier managment, record sales transaction, and generating reports on revenue, best-selling products, and stock alerts, this project build with python and use sql to intract with mysql database, and I plan to add features to this project such as Advanced Forecasting, Discounts to Sales, Supplier Orders, the software intraction is terminal-based 
+Welcome to our project! This is an inventory management system that provides users with multiple features to manage inventory, such as product management, supplier management, recording sales transactions, and generating reports on revenue, best-selling products, and stock alerts. This project is built with Python and uses SQL to interact with a MySQL database. I plan to add features to this project, such as advanced forecasting, discounts for sales, and supplier orders. The software interaction is terminal-based.
+
 
 ## How to Install and Run the Project:
-step1: install the project through froking it from github 
-step2: open your cmd or terminal and navigate to the project dirctory "Inventory managment system" 
-step3: run this command line "python main.py"
+Step 1: Install the project by forking it from GitHub.
+Step 2: Open your CMD or terminal and navigate to the project directory, "Inventory Management System".
+Step 3: Run the following command: python main.py.
+
 
 ## How to Use the Project: 
-when you run the command line "python main.py" it will display the main menu including the principle features: 
+When you run the command python main.py, it will display the main menu, which includes the following principal features:
 
-Product Management:
-if you entre this operation it will leads you to product managment menu wich include:
-Add product, Update product, Delete product, View products catalog, Search for a product, Exit
-entre the operation you want to prefrom
+Product Management
+If you enter this operation, it will lead you to the product management menu, which includes:
 
-Supplier Management:
-if you entre this operation it will leads you to supplier managment menu wich include :
-Add supplier, Update supplier Contact infomation, View suppliers, Delete supplier, Exit
-entre the operation you want to prefrom
+Add product
+Update product
+Delete product
+View products catalog
+Search for a product
+Exit
+Enter the operation you want to perform.
 
-Sales Transactions:
-if you entre this operation it will leads you to the sales transactions menu wich include :
-Record Sale Transaction, View Sales History, Exit
-entre the operation you want to prefrom
+Supplier Management
+If you enter this operation, it will lead you to the supplier management menu, which includes:
 
-Reports and Analytics:
-if you entre this operation it will leads you to the Reports and Analytics menu wich include :
-View Revenue Report, View Best Selling Products, View Low Stock Alerts, View Forecasted Stock Demand, Exit
-entre the operation you want to prefrom
+Add supplier
+Update supplier contact information
+View suppliers
+Delete supplier
+Exit
+Enter the operation you want to perform.
 
-## Licenses:
-GPL you can  make modification to this code and use it for commercial purposes.
+Sales Transactions
+If you enter this operation, it will lead you to the sales transactions menu, which includes:
+
+Record sale transaction
+View sales history
+Exit
+Enter the operation you want to perform.
+
+Reports and Analytics
+If you enter this operation, it will lead you to the reports and analytics menu, which includes:
+
+View revenue report
+View best-selling products
+View low stock alerts
+View forecasted stock demand
+Exit
+
+
+## License
+This project is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) - see the [LICENSE](LICENSE) file for details.
+![GPLv3 License](https://img.shields.io/badge/License-GPLv3-blue.svg)
+
 
 ## Technolgies used:
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=yellow)

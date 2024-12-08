@@ -2,9 +2,20 @@ from scripts.db_conncetion import create_connection, get_cursor, close_connectio
 connection = create_connection()
 mycursor = get_cursor(connection)
 class Supplier:
-
     @staticmethod
     def add_supplier(name, contact_info, provided_products):  
+        """
+        Adds a supplier to the database.
+
+        Args:
+            name (str): The name of the supplier.
+            contact_info (str): The contact information of the supplier.
+            provided_products (str): The product provided by the supplier.
+
+        Returns:
+            str: A message indicating whether the supplier was added successfully.
+
+        """        
         mycursor.execute("SELECT name FROM Products WHERE name = %s",provided_products)
         result = mycursor.fetchone()
         if result:
@@ -26,6 +37,17 @@ class Supplier:
 
     @staticmethod
     def update(name, new_value):
+        """
+        Updates a supplier in the database.
+
+        Args:
+            name (str): The name of the supplier.
+            new_value (str): The new value of the contact information.
+
+        Returns:
+            str: A message indicating whether the supplier was updated successfully.
+
+        """
         mycursor.execute("SELECT * FROM suppliers WHERE name = %s",name)
         result = mycursor.fetchone()
 
@@ -43,6 +65,17 @@ class Supplier:
             return "No Suppplier Found Matching This Name!"
     @staticmethod
     def link_supplier_to_product(provided_products, supplier_id):
+        """
+        Links a supplier to a product in the database.
+
+        Args:
+            provided_products (str): The name of the product provided by the supplier.
+            supplier_id (int): The id of the supplier.
+
+        Returns:
+            str: A message indicating whether the supplier was linked to the product successfully.
+
+        """
         sql = "UPDATE Products SET supplier_id = %s WHERE name = %s"
         val = (supplier_id, provided_products)
 
@@ -51,6 +84,13 @@ class Supplier:
      
     @staticmethod
     def view_suppliers():
+        """
+        Retrieves and prints a list of suppliers with their contact information 
+        and the products they provide.
+
+        Returns:
+        str: A message indicating whether suppliers exist in the database.
+        """
         mycursor.execute("SELECT s.name, s.contact_info, p.name FROM suppliers s JOIN Products p ON s.id = p.supplier_id ")
         result = mycursor.fetchall()
         if result:
@@ -65,6 +105,17 @@ class Supplier:
 
     @staticmethod
     def delete_supplier(name):
+        """
+        Deletes a supplier from the database.
+
+        Args:
+            name (str): The name of the supplier to be deleted.
+
+        Returns:
+            str: A message indicating whether the supplier was deleted successfully.
+
+        """
+        
         mycursor.execute("SELECT * FROM suppliers WHERE name = %s",name)
         result = mycursor.fetchone()
 
@@ -83,6 +134,21 @@ class Supplier:
             return "No Supplier Found Matching This Name!"
             
 def supplier_menu():
+    """
+    Displays the supplier management menu and handles user operations.
+
+    The menu includes options to add, update, view, delete, and exit. The user is prompted to select an operation and enter the necessary details for the chosen operation. The function continuously runs until the user chooses to exit.
+
+    Operations:
+        - Add supplier: Adds a new supplier to the database.
+        - Update supplier Contact infomation: Updates the contact information of an existing supplier.
+        - View suppliers: Displays all suppliers.
+        - Delete supplier: Removes a supplier from the database.
+        - Exit: Closes the connection and exits the menu.
+
+    Raises:
+        ValueError: If user input is invalid.
+    """
     operations = ['Add supplier', 'Update supplier Contact infomation', 'View suppliers', 'Delete supplier', 'Exit']
     print("Menu: ")
     for operation in operations:
